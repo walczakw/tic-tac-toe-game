@@ -20,17 +20,19 @@
 # Yes -> Reset and flip players (Computer starts) (make sure it starts with clear board)
 
 
-board = ["-", "-", "-",
-         "-", "-", "-",
-         "-", "-", "-"]
+board = [" ", " ", " ",
+         " ", " ", " ",
+         " ", " ", " "]
 
 # def main():
 
 # Function for displaying board
 def display_board():
-    print(board[0] + " | " + board[1] + " | " + board[2] + "     1 | 2 | 3")
-    print(board[3] + " | " + board[4] + " | " + board[5] + "     4 | 5 | 6")
-    print(board[6] + " | " + board[7] + " | " + board[8] + "     7 | 8 | 9")
+    print(board[0] + "     | " + board[1] + " | " + board[2] + "       1 | 2 | 3")
+    print("    --+---+--       --+---+--")
+    print(board[3] + "     | " + board[4] + " | " + board[5] + "       4 | 5 | 6")
+    print("    --+---+--       --+---+--")
+    print(board[6] + "     | " + board[7] + " | " + board[8] + "       7 | 8 | 9")
 
 
 print(display_board())
