@@ -51,10 +51,14 @@ print("")
 print("")
 print("How to play:")
 print("1. The game is played on a board that's 3 squares by 3 squares")
-print("2. You are X, the computer is O. Players take turns putting their marks in empty squares")
-print("3. You put a mark by pressing a number on a keyboard that corresponds with empty square (see board below)")
-print("4. The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner")
-print("5. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie")
+print("2. You are X, the computer is O. \
+    Players take turns putting their marks in empty squares")
+print("3. You put a mark by pressing a number on a keyboard \
+    that corresponds with empty square (see board below)")
+print("4. The first player to get 3 of their marks in a row \
+    (up, down, across, or diagonally) is the winner")
+print("5. When all 9 squares are full, the game is over. \
+    If no player has 3 marks in a row, the game ends in a tie")
 print("")
 print(display_board())
 print("")
@@ -62,7 +66,17 @@ print("Press any key to start...")
 print("")
 
 # 3. Ask for player's name (validate)
-print("What's your name?")
+user_name = input("What's your name? ")
+print("")
+print(f"It's your turn {user_name}")
+print("")
+
+# 4. Ask player to make a move (validate) check numbers, is already taken (is not dash inside)
+user_selection = int(input("Pick a number from 1-9 and press Enter: "))
+print("")
+
+print("")
+print(display_board())
 print("")
 
 
