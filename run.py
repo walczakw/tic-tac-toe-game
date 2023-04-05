@@ -5,7 +5,8 @@
 # 5. Create board (python list)
 # 6. Display board
 # 7. Player starts -> Ask player to make a move (validate) check numbers, is already taken (is not dash inside)
-# 8. Display board after player's move
+# otherwise, replace number with X or O
+# 8. re-write the board with changes and print the board after player's move
 # 9. Computer randomly select it's move (function check position)
 # 10. Display board after player's move + computer's move
 # 11. Check for winner - if there's 3 in a row in any of: (check after every input)
@@ -19,6 +20,7 @@
 # No -> end game
 # Yes -> Reset and flip players (Computer starts) (make sure it starts with clear board)
 
+import os
 
 board = [" ", " ", " ",
          " ", " ", " ",
@@ -36,7 +38,7 @@ def display_board():
     print("")
 
 
-print(display_board())
+(display_board())
 
 
 # 1. Start
@@ -44,26 +46,34 @@ print(display_board())
 # def main():
 
 # 2. Display instructions and ask to press any key to start (validate)
-print("")
-print("")
-print("              WELCOME TO TIC-TAC-TOE GAME !!!")
-print("")
-print("")
-print("How to play:")
-print("1. The game is played on a board that's 3 squares by 3 squares")
-print("2. You are X, the computer is O. \
+def starting_game():
+    print("")
+    print("")
+    print("              WELCOME TO TIC-TAC-TOE GAME !!!")
+    print("")
+    print("")
+    print("How to play:")
+    print("1. The game is played on a board that's 3 squares by 3 squares")
+    print("2. You are X, the computer is O. \
     Players take turns putting their marks in empty squares")
-print("3. You put a mark by pressing a number on a keyboard \
+    print("3. You put a mark by pressing a number on a keyboard \
     that corresponds with empty square (see board below)")
-print("4. The first player to get 3 of their marks in a row \
+    print("4. The first player to get 3 of their marks in a row \
     (up, down, across, or diagonally) is the winner")
-print("5. When all 9 squares are full, the game is over. \
+    print("5. When all 9 squares are full, the game is over. \
     If no player has 3 marks in a row, the game ends in a tie")
-print("")
-print(display_board())
-print("")
-print("Press any key to start...")
-print("")
+    print("")
+    print(display_board())
+    print("")
+    print("Press any key to start...")
+    print("")
+
+
+starting_game()
+
+# clearing the screen
+# os.system('cls' if os.name == 'nt' else 'clear')
+
 
 # 3. Ask for player's name (validate)
 user_name = input("What's your name? ")
